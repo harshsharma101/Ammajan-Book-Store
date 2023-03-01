@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Costumer registration form</title>
+    <link rel="stylesheet" href="styleregistration.css">
+</head>
+<body>
+    <div class="hero">
+       <div class="form-box">
+           <div class="button-box">
+               <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
+           </div>
+           
+            <form id="login" class="input-group">
+                <input type="text" class="input-feild" placeholder="User Id" pattern="^[A-Za-z]+\s[a-zA-Z]+$" required>
+                <input type="text" class="input-feild" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span> <br> <br> <br> <br> <br><br><br> <br> <br>
+                
+               <button type="submit" class="submit-btn">Log In</button>
+            </form>
+            <form  id="register"  class="input-group">
+                <input type="text" class="input-feild" placeholder="User Id" pattern="^[A-Za-z]+\s[a-zA-Z]+$" required>
+                <input type="email" class="input-feild" placeholder="email Id" pattern="^([a-z0-9\._]+)@([a-z]+).([a-z]{2,3})$" required>
+                <input type="text" class="input-feild" placeholder="Enter Password" required>
+                <input type="text" class="input-feild" placeholder="Mobile number" pattern="^([7-9]{1})([0-9]{9})$" maxlength="10" required> <br> <br> 
+                <h4 style="font: sans-serif; font-size: medium; font-weight: 500;" >Gender:</h4> 
+                <input type="radio" name="gender" value="male"> Male &nbsp; 
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="not say"> Rather not say
+                <br>
+                <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+               <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function signup(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function Login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+    </script>
+</body>
+</html>
